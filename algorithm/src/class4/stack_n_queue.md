@@ -84,8 +84,8 @@ public int pop() throws EmptyIntStackException{
 public int peek() throws EmptyIntStackException{
     if(ptr <= 0) {
 		throw new EmptyIntStackException();
-	}
-    	return stk[ptr - 1];
+    }
+    return stk[ptr - 1];
 }
 ```
 
@@ -95,11 +95,11 @@ public int peek() throws EmptyIntStackException{
     * 실패하면 -1 반환
 ```java
 public int indexOf(int x) {
-    	for(int i = ptr - 1; i >= 0; i--) {
-    		if(stk[i] == x) {
-    			return i;
-    		}
+    for(int i = ptr - 1; i >= 0; i--) {
+   	if(stk[i] == x) {
+    		return i;
     	}
+    }
     return -1;
 }
 ```
@@ -107,7 +107,7 @@ public int indexOf(int x) {
     * 스택에 쌓여있는 모든 데이터를 삭제하는 메서드
 ```java
 public void clear() {
-	ptr = 0;
+   ptr = 0;
 }
 ```
 
@@ -115,7 +115,7 @@ public void clear() {
     * 스택의 용량을 반환하는 메서드 (max값 그대로 반환)
 ```java
 public int capacity() {
-    	return max;
+    return max;
 }
 ```
 
@@ -130,7 +130,7 @@ public int size() {
     * 스택이 비어있으면 false, 가득 찼으면 true 반환
 ```java
 public boolean isEmpty() {
-    	return ptr <= max;
+    return ptr <= max;
 }
 ```
 * **스택이 가득 찼는지 검사하는 메서드 (IsFull)**
